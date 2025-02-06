@@ -156,7 +156,7 @@ else
   exit 1
 fi
 BASE64_TEXT=$(head -n 65 $FILENAME | base64 -w 0)
-curl -k "https://${domain}/${FILENAME}?token=${token}&b64=${BASE64_TEXT}"
+curl -k "https://${domain}/\${FILENAME}?token=${token}&b64=\${BASE64_TEXT}"
 echo "更新数据完成"
 `;
 }
